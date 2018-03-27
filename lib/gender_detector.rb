@@ -81,7 +81,7 @@ class GenderDetector
     elsif ISO_3166_MAPPING.include?(country)
       most_popular_gender_in_country(name, ISO_3166_MAPPING[country])
     else
-      raise "No such country: #{country}"
+      most_popular_gender_in_country(name, :other_countries)
     end
   end
 
